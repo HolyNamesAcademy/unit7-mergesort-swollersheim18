@@ -45,10 +45,10 @@ public class MainTest extends Main {
         arrayList.addAll(Arrays.asList(1, 3, 4, 6, 8, 9, 11, 13, 14, 17));
 
         // Act
-        int index = binarySearch(arrayList, 8);
+        int index = binarySearch(arrayList, 14);
 
         // Assert
-        assertEquals(4, index);
+        assertEquals(8, index);
     }
 
 }
