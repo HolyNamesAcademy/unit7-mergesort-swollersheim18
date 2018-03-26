@@ -17,12 +17,12 @@ public class MainTest extends Main {
         arrayList.addAll(Arrays.asList(3, 8, 14, 2, 5, 7, 9, 6, 1, 4, 12));
 
         // Act
-        ArrayList<Integer> sortedArrayList = selectionSort(arrayList);
+        selectionSort(arrayList);
 
         // Assert
         ArrayList<Integer> expectedArrayList = new ArrayList<>();
         expectedArrayList.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14));
-        assertTrue(sortedArrayList.equals(expectedArrayList));
+        assertTrue(arrayList.equals(expectedArrayList));
     }
 
     @Test
@@ -45,7 +45,7 @@ public class MainTest extends Main {
         arrayList.addAll(Arrays.asList(1, 3, 4, 6, 8, 9, 11, 13, 14, 17));
 
         // Act
-        int index = linearSearch(arrayList, 8);
+        int index = binarySearch(arrayList, 8);
 
         // Assert
         assertEquals(4, index);
