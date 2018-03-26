@@ -9,8 +9,8 @@ public class Main {
     }
 
     /**
-     * Returns arrayList with all elements in sorted order. This function uses selection sort to
-     * sort the arrayList.
+     * Puts the elements in the arrayList in sorted order from smallest to greatest.
+     * This function uses selection sort to sort the arrayList.
      * @param arrayList the ArrayList to be sorted. arrayList cannot contain duplicates
      */
     public static void selectionSort(ArrayList<Integer> arrayList) {
