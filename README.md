@@ -33,8 +33,8 @@ We know that hard, and honest work doesn't come easily. If you feel like you are
   6. If it asks you whether you want to open the project or not, select yes.
   7. You should see your project open. If you need to reopen the project, you should see it under
      "File > Open Recent"
-  8. If you click on the drop-down menu of run configurations, you should see "Main", "TODO", and
-     "TODO" as options. You should be able to run all of them. If any of the configurations are missing,
+  8. If you click on the drop-down menu of run configurations, you should see "Main", "Test", and
+     "Test" as options. You should be able to run all of them. If any of the configurations are missing,
      call an instructor over.
 
 ## Project overview
