@@ -10,10 +10,19 @@ public class Main {
 
     /**
      * Puts the elements in the arrayList in sorted order from smallest to greatest.
-     * This function uses selection sort to sort the arrayList.
+     * This function uses SelectionSort to sort the arrayList.
      * @param arrayList the ArrayList to be sorted. arrayList cannot contain duplicates
      */
     public static void selectionSort(ArrayList<Integer> arrayList) {
+        throw new UnsupportedOperationException("SelectionSort() has not been implemented yet");
+    }
+
+    /**
+     * Puts the elements in the arrayList in sorted order from smallest to greatest.
+     * This function uses MergeSort to sort the arrayList.
+     * @param arrayList the ArrayList to be sorted. arrayList cannot contain duplicates
+     */
+    public static void mergeSort(ArrayList<Integer> arrayList) {
         throw new UnsupportedOperationException("SelectionSort() has not been implemented yet");
     }
 

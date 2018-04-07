@@ -22,7 +22,22 @@ public class MainTest extends Main {
         // Assert
         ArrayList<Integer> expectedArrayList = new ArrayList<>();
         expectedArrayList.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14));
-        assertTrue(arrayList.equals(expectedArrayList));
+        assertEquals(expectedArrayList, arrayList);
+    }
+
+    @Test
+    public void mergeSort() throws Exception {
+        // Arrange
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.addAll(Arrays.asList(3, 8, 14, 2, 5, 7, 9, 6, 1, 4, 12));
+
+        // Act
+        mergeSort(arrayList);
+
+        // Assert
+        ArrayList<Integer> expectedArrayList = new ArrayList<>();
+        expectedArrayList.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14));
+        assertEquals(expectedArrayList, arrayList);
     }
 
     @Test
