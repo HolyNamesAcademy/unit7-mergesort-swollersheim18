@@ -37,4 +37,40 @@ public class Main {
     public static int binarySearch(ArrayList<Integer> arrayList, int value) {
         throw new UnsupportedOperationException("LinearSearch() has not been implemented yet");
     }
+
+    /**
+     * Puts the elements in the arrayList in sorted order from smallest to greatest.
+     * This function uses MergeSort to sort the arrayList.
+     * @param arrayList the ArrayList to be sorted. arrayList cannot contain duplicates
+     */
+    public static void mergeSort(ArrayList<Integer> arrayList) {
+        throw new UnsupportedOperationException("mergeSort() has not been implemented yet");
+    }
+
+    /**
+     * This function is a helper function used to help you implement mergeSort.
+     * The function sorts the portion of arrayList specified by the range [lo, hi). The range
+     * includes lo but excludes hi (arrayList[lo] is the first element in the range, but
+     * arrayList[hi] is the first element after the last element in the range).
+     * @param arrayList the ArrayList to be sorted.
+     * @param lo the index of the first element in the range
+     * @param hi the index of the last element in the range + 1.
+     */
+    public static void sort(ArrayList<Integer> arrayList, int lo, int hi) {
+        throw new UnsupportedOperationException("sort() has not been implemented yet");
+    }
+
+    /**
+     * This function is a helper function used to help you implement mergeSort.
+     * The function merges two consecutive, sorted ranges in the arrayList into one sorted range. The ranges
+     * are specified as [lo, mid) and [mid, hi). Each range includes the first element, but excludes
+     * the last element (the same way as in sort()).
+     * @param arrayList the ArrayList to be sorted.
+     * @param lo the index of the first element in the first range
+     * @param mid the boundary point of the two ranges. arrayList[mid] is in the second range.
+     * @param hi the index of the last element in the second range + 1.
+     */
+    public static void merge(ArrayList<Integer> arrayList, int lo, int mid, int hi) {
+        throw new UnsupportedOperationException("merge() has not been implemented yet");
+    }
 }

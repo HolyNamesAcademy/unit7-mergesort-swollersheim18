@@ -8,6 +8,7 @@
 * [SelectionSort](#selectionsort)
 * [Linear Search](#linear-search)
 * [Binary Search](#binary-search)
+* [Merge Sort](#binary-search)
 
 ## Good work pledge
 
@@ -43,6 +44,7 @@ This project is a complement to the lecture. In this project, we're going to be 
   1. Selection Sort
   2. Linear Search
   3. Binary Search
+  4. Merge Sort
   
 We'll be implementing these functions in parts as we learn the concepts. The algorithms for each function are listed below, for your convenience.
 
@@ -63,6 +65,22 @@ We'll be implementing these functions in parts as we learn the concepts. The alg
   3. Check if the middle number in your ArrayList is the number you are looking for (If there are two middle numbers, just pick one and be consistent). If it is, return it.
   4. If the middle number is greater the number you are looking for, update your range so the “upper bound” is the number to the left of the middle number. If it is smaller, update your range so the “lower bound is the number to the right of the middle number.
   5. Go back to step 2 and continue with your new range.
+
+## Merge Sort
+There are two main operations in mergeSort: **sort** and **merge**.
+
+**Sort** is defined recursively:
+  1. Start with the entire ArrayList as your “range”.
+  2. If the size of the range is 1 or 0, it is already sorted. You are done sorting the range. 
+  3. Otherwise, divide your range in half, into two smaller ranges. **Sort** each individual range, and then **merge** the ranges together.
+
+**Merge** is defined as follows:
+  1. Create a temporary array. We will put elements from the two ranges into the temp array in sorted order.
+  2. Start at the first element of each range. For each range, the element that you are at is the "current element".
+  3. If either range has no more elements, take the current element from the other range and add it to the temp array. If both ranges have elements left, check which current element is smaller and add that element to your temporary array (if they are the same, you can pick either although the element in the left array is preferred).
+  4. Only for the range that had the number you added, move to the next element. 
+  5. If there are more elements that need to be added, go back to step 3. Otherwise, move on to step 6.
+  6. Copy the temp array back into the location of the ranges we just merged.
 
 
 
