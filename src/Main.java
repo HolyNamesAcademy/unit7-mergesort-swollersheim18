@@ -48,7 +48,8 @@ public class Main {
     }
 
     /**
-     * This function sorts the portion of arrayList specified by the range [lo, hi). The range
+     * This function is a helper function used to help you implement mergeSort.
+     * The function sorts the portion of arrayList specified by the range [lo, hi). The range
      * includes lo but excludes hi (arrayList[lo] is the first element in the range, but
      * arrayList[hi] is the first element after the last element in the range).
      * @param arrayList the ArrayList to be sorted.
@@ -60,7 +61,8 @@ public class Main {
     }
 
     /**
-     * This function merges two consecutive, sorted ranges in the arrayList into one sorted range. The ranges
+     * This function is a helper function used to help you implement mergeSort.
+     * The function merges two consecutive, sorted ranges in the arrayList into one sorted range. The ranges
      * are specified as [lo, mid) and [mid, hi). Each range includes the first element, but excludes
      * the last element (the same way as in sort()).
      * @param arrayList the ArrayList to be sorted.
