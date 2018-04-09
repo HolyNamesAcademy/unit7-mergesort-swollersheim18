@@ -67,14 +67,14 @@ We'll be implementing these functions in parts as we learn the concepts. The alg
   5. Go back to step 2 and continue with your new range.
 
 ## Merge Sort
-There are two main operations in mergeSort: *sort* and *merge*.
+There are two main operations in mergeSort: **sort** and **merge**.
 
-*Sort* is defined recursively:
+**Sort** is defined recursively:
   1. Start with the entire ArrayList as your “range”.
   2. If the size of the range is 1 or 0, it is already sorted. You are done sorting the range. 
-  3. Otherwise, divide your range in half, into two smaller ranges. *Sort* each individual range, and then *merge* the ranges together.
+  3. Otherwise, divide your range in half, into two smaller ranges. **Sort** each individual range, and then **merge** the ranges together.
 
-*Merge* is defined as follows:
+**Merge** is defined as follows:
   1. Create a temporary array. We will put elements from the two ranges into the temp array in sorted order.
   2. Start at the first element of each range. For each range, the element that you are at is the "current element".
   3. If either range has no more elements, take the current element from the other range and add it to the temp array. If both ranges have elements left, check which current element is smaller and add that element to your temporary array (if they are the same, you can pick either although the element in the left array is preferred).
