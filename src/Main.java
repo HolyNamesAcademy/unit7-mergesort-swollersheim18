@@ -44,7 +44,11 @@ public class Main {
      * @param arrayList the ArrayList to be sorted. arrayList cannot contain duplicates
      */
     public static void mergeSort(ArrayList<Integer> arrayList) {
-        throw new UnsupportedOperationException("mergeSort() has not been implemented yet");
+        int first = 0; int mid = arrayList.size()/2; int last = arrayList.size();
+        if(last == 0)
+        {
+            return;
+        }
     }
 
     /**
@@ -57,7 +61,24 @@ public class Main {
      * @param hi the index of the last element in the range + 1.
      */
     public static void sort(ArrayList<Integer> arrayList, int lo, int hi) {
-        throw new UnsupportedOperationException("sort() has not been implemented yet");
+        if(lo<hi && (hi-lo)>=1)
+        {
+            ArrayList<Integer> lower = new ArrayList<>();
+            ArrayList<Integer> higher = new ArrayList<>();
+            int mid = (lo + hi)/2;
+            for(int x = lo; x < mid; x++)
+            {
+                lower.add(arrayList.get(x));
+            }
+            for(int x = mid; x < hi; x++)
+            {
+                higher.add(arrayList.get(x));
+            }
+            sort(lower, lo, mid);
+            sort(higher, mid, hi);
+
+            merge(arrayList, lo, mid, hi);
+        }
     }
 
     /**
@@ -71,6 +92,47 @@ public class Main {
      * @param hi the index of the last element in the second range + 1.
      */
     public static void merge(ArrayList<Integer> arrayList, int lo, int mid, int hi) {
-        throw new UnsupportedOperationException("merge() has not been implemented yet");
+        ArrayList<Integer> merged = new ArrayList<>();
+        int i = lo; int j = mid;
+        if(lo > 0)
+        {
+            for(int x = 0; x < lo; x++)
+            {
+                merged.add(arrayList.get(x));
+            }
+        }
+        while(i<= mid && j<=hi-1)
+        {
+            if(arrayList.get(i)<= arrayList.get(j))
+            {
+                merged.add(arrayList.get(i));
+                i++;
+            }
+            else
+            {
+                merged.add(arrayList.get(j));
+                j++;
+            }
+        }
+        if(i <= mid)
+        {
+            for(int x = i; x < mid; x++) {
+                merged.add(arrayList.get(x));
+            }
+        }
+        if(hi < arrayList.size())
+        {
+            for(int x = hi; x < arrayList.size(); x++)
+            {
+                merged.add(arrayList.get(x));
+            }
+        }
+
+        //I did this because "arrayList = merged;" wasn't working
+        arrayList.clear();
+        for(int x = 0; x < merged.size(); x++)
+        {
+            arrayList.add(merged.get(x));
+        }
     }
 }
