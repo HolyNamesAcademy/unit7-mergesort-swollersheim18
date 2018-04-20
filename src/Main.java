@@ -44,10 +44,13 @@ public class Main {
      * @param arrayList the ArrayList to be sorted. arrayList cannot contain duplicates
      */
     public static void mergeSort(ArrayList<Integer> arrayList) {
-        int first = 0; int mid = arrayList.size()/2; int last = arrayList.size();
-        if(last == 0)
+        if(arrayList.size() == 0)
         {
             return;
+        }
+        else
+        {
+            sort(arrayList, 0, arrayList.size());
         }
     }
 
