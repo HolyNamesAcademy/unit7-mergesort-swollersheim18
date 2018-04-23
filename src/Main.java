@@ -50,7 +50,7 @@ public class Main {
         }
         else
         {
-            sort(arrayList, 0, arrayList.size());
+            sort(arrayList, 0, arrayList.size()+1);
         }
     }
 
@@ -64,11 +64,15 @@ public class Main {
      * @param hi the index of the last element in the range + 1.
      */
     public static void sort(ArrayList<Integer> arrayList, int lo, int hi) {
-        if(lo<hi && (hi-lo)>=1)
+        if(arrayList.size() == 1)
+        {
+            return;
+        }
+        else if(lo<hi && (hi-lo)>=2)
         {
             ArrayList<Integer> lower = new ArrayList<>();
             ArrayList<Integer> higher = new ArrayList<>();
-            int mid = (lo + hi)/2;
+            int mid = (lo + hi)/2 -1;
             for(int x = lo; x < mid; x++)
             {
                 lower.add(arrayList.get(x));
